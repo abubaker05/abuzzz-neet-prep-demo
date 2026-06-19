@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abuzzz NEET Prep | Practice. Analyze. Improve.</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0B0F19',
+                        brandCard: '#161F30',
+                        brandPrimary: '#3B82F6',
+                        brandPrimaryHover: '#2563EB',
+                        brandSecondary: '#10B981',
+                        brandSecondaryHover: '#059669',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #161F30;
+            border-radius: 4px;
+            border: 1px solid #1E293B;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563EB;
+        }
+        a, button {
+            touch-action: manipulation;
+        }
+        button:focus-visible, a:focus-visible {
+            outline: 2px solid #3B82F6;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-brandDark text-white font-['Inter'] antialiased min-h-screen flex flex-col">
+
+    <header class="border-b border-gray-800 bg-brandDark/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-3">
+                    <span class="bg-gradient-to-r from-brandPrimary to-brandSecondary text-white font-bold text-xl px-3 py-1 rounded-lg shadow-md shadow-blue-500/10">A</span>
+                    <span class="font-bold text-xl tracking-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Abuzzz NEET Prep</span>
+                </div>
+                <p class="text-xs text-gray-400 font-medium tracking-wider mt-0.5 pl-10 hidden sm:block">Practice. Analyze. Improve.</p>
+            </div>
+
+            <button id="menu-btn" class="p-2 text-gray-400 hover:text-white focus:outline-none md:hidden">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#" onclick="showSection('landing-view')" class="text-white border-b-2 border-brandPrimary pb-1 transition-colors">Dashboard</a>
+                <a href="#" class="hover:text-white transition-colors">Question Bank</a>
+                <a href="#" class="hover:text-white transition-colors">Analytics</a>
+                <a href="#" class="hover:text-white transition-colors">Mock Tests</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <button class="bg-brandCard hover:bg-gray-800 border border-gray-700 text-sm font-semibold py-2.5 px-5 rounded-xl transition-all duration-200 shadow-sm">
+                    <i class="fa-solid fa-user-graduate mr-2 text-brandSecondary"></i>Aspirant Profile
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-brandDark px-4 pt-4 pb-6 space-y-3">
+            <a href="#" onclick="showSection('landing-view')" class="block px-3 py-2.5 rounded-xl bg-brandCard text-white font-medium">Dashboard</a>
+            <a href="#" class="block px-3 py-2.5 rounded-xl text-gray-400 hover:bg-brandCard hover:text-white font-medium">Question Bank</a>
+            <a href="#" class="block px-3 py-2.5 rounded-xl text-gray-400 hover:bg-brandCard hover:text-white font-medium">Analytics</a>
+            <a href="#" class="block px-3 py-2.5 rounded-xl text-gray-400 hover:bg-brandCard hover:text-white font-medium">Mock Tests</a>
+            <div class="pt-4 border-t border-gray-800">
+                <button class="w-full bg-brandCard border border-gray-700 text-sm font-semibold py-3 px-4 rounded-xl transition-all">
+                    <i class="fa-solid fa-user-graduate mr-2 text-brandSecondary"></i>Aspirant Profile
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        
+        <div id="landing-view" class="view-section">
+            <section class="relative rounded-3xl overflow-hidden border border-gray-800 bg-gradient-to-b from-brandCard to-brandDark/40 p-8 sm:p-12 lg:p-16 mb-12 shadow-2xl">
+                <div class="absolute top-0 right-0 -mt-24 -mr-24 w-96 h-96 bg-brandPrimary/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -mb-24 -ml-24 w-96 h-96 bg-brandSecondary/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="max-w-3xl relative z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandPrimary/10 border border-brandPrimary/20 text-brandPrimary text-xs font-semibold uppercase tracking-wider mb-6">
+                        <i class="fa-solid fa-bolt-lightning"></i> High-Yield Question Bank 2026
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                        Crack NEET with <br class="hidden sm:inline" />
+                        <span class="bg-gradient-to-r from-brandPrimary to-cyan-400 bg-clip-text text-transparent">Smart Practice</span>
+                    </h1>
+                    <p class="text-gray-400 text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl">
+                        Practice Physics, Chemistry, and Biology with detailed performance analysis and progress tracking. Designed to replicate the real exam environment.
+                    </p>
+                    
+                    <div class="bg-brandDark/60 border border-gray-800 rounded-2xl p-6 mb-8 max-w-xl">
+                        <div class="mb-4">
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Aspirant Name</label>
+                            <input type="text" id="student-name" placeholder="Enter your full name" class="w-full bg-brandCard border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brandPrimary transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Select Practice Track</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button type="button" onclick="selectSubject('Physics', this)" class="subject-opt border border-gray-700 bg-brandCard/50 text-gray-300 py-2.5 px-4 rounded-xl text-sm font-medium transition-all hover:border-brandPrimary flex items-center gap-2">
+                                    <i class="fa-solid fa-atom text-brandPrimary"></i> Physics
+                                </button>
+                                <button type="button" onclick="selectSubject('Chemistry', this)" class="subject-opt border border-gray-700 bg-brandCard/50 text-gray-300 py-2.5 px-4 rounded-xl text-sm font-medium transition-all hover:border-brandPrimary flex items-center gap-2">
+                                    <i class="fa-solid fa-flask text-purple-400"></i> Chemistry
+                                </button>
+                                <button type="button" onclick="selectSubject('Biology', this)" class="subject-opt border border-gray-700 bg-brandCard/50 text-gray-300 py-2.5 px-4 rounded-xl text-sm font-medium transition-all hover:border-brandPrimary flex items-center gap-2">
+                                    <i class="fa-solid fa-dna text-brandSecondary"></i> Biology
+                                </button>
+                                <button type="button" onclick="selectSubject('Mixed Test', this)" class="subject-opt border border-gray-700 bg-brandCard/50 text-gray-300 py-2.5 px-4 rounded-xl text-sm font-medium transition-all hover:border-brandPrimary flex items-center gap-2">
+                                    <i class="fa-solid fa-layer-group text-amber-400"></i> Mixed Test
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <button onclick="initiateTest()" class="bg-brandPrimary hover:bg-brandPrimaryHover text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-blue-500/20 flex items-center justify-center gap-3 text-base">
+                            Start Practice Test <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </button>
+                        <button class="bg-brandCard hover:bg-gray-800 border border-gray-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center gap-3 text-base">
+                            <i class="fa-solid fa-chart-pie text-brandSecondary"></i> View Previous Results
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-brandCard border border-gray-800 rounded-2xl p-6 hover:border-gray-700 transition-all duration-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-brandSecondary mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-dna text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Biology</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Master Zoology and Botany with diagrams, assertions, and NCERT-mapped high-yield tracking.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/60 text-xs text-gray-400 font-medium">
+                        <span>90 Chapters Covered</span>
+                        <span class="text-brandSecondary"><i class="fa-solid fa-circle-check mr-1"></i> Ready</span>
+                    </div>
+                </div>
+
+                <div class="bg-brandCard border border-gray-800 rounded-2xl p-6 hover:border-gray-700 transition-all duration-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brandPrimary mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-atom text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Physics</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Build conceptual clarity through step-by-step mathematical derivations and formula-based rigorous practice drills.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/60 text-xs text-gray-400 font-medium">
+                        <span>28 Chapters Covered</span>
+                        <span class="text-brandPrimary"><i class="fa-solid fa-circle-check mr-1"></i> Ready</span>
+                    </div>
+                </div>
+
+                <div class="bg-brandCard border border-gray-800 rounded-2xl p-6 hover:border-gray-700 transition-all duration-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-flask text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Chemistry</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Exhaustive practice modules across Physical equations, Organic mechanisms, and Inorganic concepts.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/60 text-xs text-gray-400 font-medium">
+                        <span>30 Chapters Covered</span>
+                        <span class="text-purple-400"><i class="fa-solid fa-circle-check mr-1"></i> Ready</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="exam-view" class="view-section hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                
+                <div class="lg:col-span-3 flex flex-col justify-between bg-brandCard border border-gray-800 rounded-2xl p-6 sm:p-8 min-h-[500px]">
+                    <div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-4 mb-6">
+                            <div class="flex items-center gap-3">
+                                <span id="current-subject-badge" class="bg-brandPrimary/10 border border-brandPrimary/30 text-brandPrimary text-xs px-3 py-1 rounded-md font-semibold uppercase">Physics</span>
+                                <span class="text-sm text-gray-400 font-medium">Question <span id="question-index-counter" class="text-white font-bold">1</span></span>
+                            </div>
+                            <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-lg bg-amber-400/10 border border-amber-400/20 px-4 py-1.5 rounded-xl shadow-sm">
+                                <i class="fa-regular fa-clock text-sm"></i> <span id="timer-display">45:00</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h2 id="question-text" class="text-lg sm:text-xl font-medium leading-relaxed mb-6">Loading question text...</h2>
+                            <div id="options-container" class="space-y-3">
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-6 border-t border-gray-800/60 gap-4">
+                        <button onclick="navigateQuestion(-1)" class="bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white font-semibold py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-chevron-left text-xs"></i> Previous
+                        </button>
+                        <div class="flex items-center gap-3">
+                            <button onclick="navigateQuestion(1)" class="bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white font-semibold py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2">
+                                Next <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                            <button onclick="submitExam()" class="bg-brandSecondary hover:bg-brandSecondaryHover text-white font-bold py-2.5 px-6 rounded-xl transition-colors shadow-md shadow-emerald-500/10">
+                                Submit Exam
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brandCard border border-gray-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Question Navigation</h3>
+                        <div id="palette-grid" class="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-4 gap-2 max-h-[320px] overflow-y-auto pr-1">
+                            </div>
+                    </div>
+                    
+                    <div class="pt-6 border-t border-gray-800 mt-6 space-y-2.5 text-xs font-medium text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-brandPrimary"></span> Selected / Active
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-brandSecondary"></span> Answered
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded bg-gray-800 border border-gray-700"></span> Unanswered
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="result-view" class="view-section hidden">
+            <section class="bg-gradient-to-b from-brandCard to-brandDark/40 border border-gray-800 rounded-3xl p-6 sm:p-10 shadow-2xl mb-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-24 -mr-24 w-96 h-96 bg-brandSecondary/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="border-b border-gray-800 pb-6 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brandSecondary/10 border border-brandSecondary/20 text-brandSecondary text-xs font-semibold uppercase mb-3">
+                            <i class="fa-solid fa-square-poll-vertical"></i> Performance Review Verified
+                        </div>
+                        <h2 class="text-3xl font-extrabold tracking-tight">Diagnostic Analysis Summary</h2>
+                        <p class="text-sm text-gray-400 mt-1">Aspirant Profile: <span id="result-student-name" class="text-white font-semibold"></span></p>
+                    </div>
+                    <div class="bg-brandDark/80 border border-gray-800 px-6 py-4 rounded-2xl text-center">
+                        <p class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Final Aggregated Score</p>
+                        <p class="text-3xl font-black text-brandPrimary" id="analytics-score">0 / 0</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-brandDark/50 border border-gray-800/80 rounded-xl p-4 text-center">
+                        <p class="text-xs text-gray-400 font-semibold mb-1">Total Items</p>
+                        <p class="text-2xl font-bold" id="analytics-total">0</p>
+                    </div>
+                    <div class="bg-brandDark/50 border border-gray-800/80 rounded-xl p-4 text-center">
+                        <p class="text-xs text-brandSecondary font-semibold mb-1">Correct Assertions</p>
+                        <p class="text-2xl font-bold text-brandSecondary" id="analytics-correct">0</p>
+                    </div>
+                    <div class="bg-brandDark/50 border border-gray-800/80 rounded-xl p-4 text-center">
+                        <p class="text-xs text-red-400 font-semibold mb-1">Incorrect Assessment</p>
+                        <p class="text-2xl font-bold text-red-400" id="analytics-wrong">0</p>
+                    </div>
+                    <div class="bg-brandDark/50 border border-gray-800/80 rounded-xl p-4 text-center">
+                        <p class="text-xs text-cyan-400 font-semibold mb-1">Precision Rating</p>
+                        <p class="text-2xl font-bold text-cyan-400" id="analytics-percentage">0%</p>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-chart-line text-brandPrimary"></i> Granular Subject Analysis</h3>
+                    <div id="subject-breakdown-container" class="space-y-4">
+                        </div>
+                </div>
+
+                <div class="flex justify-center pt-4">
+                    <button onclick="showSection('landing-view')" class="bg-brandPrimary hover:bg-brandPrimaryHover text-white font-semibold py-3 px-8 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                        Return to Practice Dashboard
+                    </button>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="border-t border-gray-800 bg-brandDark mt-auto py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <p class="text-sm text-gray-400 font-medium">
+                Built with ❤️ for NEET Aspirants by <span class="text-white font-semibold">Abuzzz</span>
+            </p>
+            <p class="text-xs text-gray-500">
+                &copy; 2026 Abuzzz NEET Prep. All professional rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // CONFIGURATION INTEGRATION POINT
+        const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbweoLfibz9pd1TwGPbncIUTuciykF2OK2VOTLDWOsP7ve_a_fsiKq5KP2AmxJShXjoMfw/exec";
+
+        // Application State Management Registry
+        let allQuestionsPool = [];
+        let runningTestQuestions = [];
+        let selectedTrack = '';
+        let currentQuestionIdx = 0;
+        let candidateSelections = {}; 
+        let countdownTimerInstance = null;
+        let secondsRemaining = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMenuListeners();
+        });
+
+        function initMenuListeners() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = menuBtn ? menuBtn.querySelector('i') : null;
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    if (menuIcon) {
+                        if (mobileMenu.classList.contains('hidden')) {
+                            menuIcon.className = 'fa-solid fa-bars text-xl';
+                        } else {
+                            menuIcon.className = 'fa-solid fa-xmark text-xl';
+                        }
+                    }
+                });
+            }
+        }
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.view-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function selectSubject(subjectName, element) {
+            document.querySelectorAll('.subject-opt').forEach(opt => {
+                opt.classList.remove('border-brandPrimary', 'bg-brandPrimary/10', 'text-white');
+                opt.classList.add('border-gray-700', 'bg-brandCard/50', 'text-gray-300');
+            });
+            element.classList.remove('border-gray-700', 'bg-brandCard/50', 'text-gray-300');
+            element.classList.add('border-brandPrimary', 'bg-brandPrimary/10', 'text-white');
+            selectedTrack = subjectName;
+        }
+
+        async function initiateTest() {
+            const studentName = document.getElementById('student-name').value.trim();
+            if (!studentName) {
+                alert('Please provide a valid Aspirant Name to register your exam footprint.');
+                return;
+            }
+            if (!selectedTrack) {
+                alert('Please select a structured practice subject track module.');
+                return;
+            }
+
+            try {
+                const response = await fetch('questions.json');
+                if (!response.ok) throw new Error('Failed to capture assets source matrix payload configuration data.');
+                allQuestionsPool = await response.json();
+            } catch (err) {
+                alert('Error processing configuration file questions.json. Initializing mock dataset simulation fallback architecture.');
+                allQuestionsPool = getMockFallbackQuestions();
+            }
+
+            filterQuestionsForTrack();
+
+            if (runningTestQuestions.length === 0) {
+                alert('No matching question items found inside database layer registry matrix matching target criteria.');
+                return;
+            }
+
+            // Initialization state settings parameters
+            currentQuestionIdx = 0;
+            candidateSelections = {};
+            secondsRemaining = runningTestQuestions.length * 60; // 1 minute per item structural limit allocations
+            
+            buildQuestionPalette();
+            renderQuestionWorkspace();
+            launchTimerEngine();
+            showSection('exam-view');
+        }
+
+        function filterQuestionsForTrack() {
+            if (selectedTrack === 'Mixed Test') {
+                runningTestQuestions = [...allQuestionsPool];
+            } else {
+                runningTestQuestions = allQuestionsPool.filter(q => q.subject && q.subject.toLowerCase() === selectedTrack.toLowerCase());
+            }
+            // Implementation of standard diagnostic pseudo-shuffle array variant sequence allocation algorithms
+            runningTestQuestions.sort(() => 0.5 - Math.random());
+        }
+
+        function buildQuestionPalette() {
+            const grid = document.getElementById('palette-grid');
+            grid.innerHTML = '';
+            runningTestQuestions.forEach((_, idx) => {
+                const button = document.createElement('button');
+                button.id = `palette-item-${idx}`;
+                button.innerText = idx + 1;
+                button.className = `w-10 h-10 rounded-lg text-sm font-bold flex items-center justify-center border transition-all ${getPaletteItemStyle(idx)}`;
+                button.onclick = () => jumpToQuestion(idx);
+                grid.appendChild(button);
+            });
+        }
+
+        function getPaletteItemStyle(idx) {
+            if (idx === currentQuestionIdx) {
+                return 'bg-brandPrimary text-white border-brandPrimary shadow-md shadow-blue-500/20';
+            }
+            if (candidateSelections[idx] !== undefined) {
+                return 'bg-brandSecondary text-white border-brandSecondary';
+            }
+            return 'bg-gray-800/40 text-gray-400 border-gray-800 hover:border-gray-700';
+        }
+
+        function renderQuestionWorkspace() {
+            const question = runningTestQuestions[currentQuestionIdx];
+            document.getElementById('question-index-counter').innerText = currentQuestionIdx + 1;
+            document.getElementById('current-subject-badge').innerText = question.subject || selectedTrack;
+            document.getElementById('question-text').innerText = question.question;
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            question.options.forEach((opt, idx) => {
+                const isSelected = candidateSelections[currentQuestionIdx] === idx;
+                const button = document.createElement('button');
+                button.className = `w-full text-left p-4 rounded-xl border font-medium text-sm transition-all duration-150 flex items-center gap-3 group ${
+                    isSelected 
+                    ? 'bg-brandPrimary/10 border-brandPrimary text-white' 
+                    : 'bg-brandDark/40 border-gray-800 hover:border-gray-700 text-gray-300'
+                }`;
+                button.onclick = () => selectOption(idx);
+
+                const indicator = document.createElement('span');
+                indicator.className = `w-5 h-5 rounded-full border flex items-center justify-center text-xs font-bold shrink-0 ${
+                    isSelected 
+                    ? 'bg-brandPrimary border-brandPrimary text-white' 
+                    : 'border-gray-600 text-gray-400 group-hover:border-gray-500'
+                }`;
+                indicator.innerText = String.fromCharCode(65 + idx);
+
+                const label = document.createElement('span');
+                label.innerText = opt;
+
+                button.appendChild(indicator);
+                button.appendChild(label);
+                container.appendChild(button);
+            });
+
+            updatePaletteIndicators();
+        }
+
+        function selectOption(optIndex) {
+            candidateSelections[currentQuestionIdx] = optIndex;
+            renderQuestionWorkspace();
+        }
+
+        function updatePaletteIndicators() {
+            runningTestQuestions.forEach((_, idx) => {
+                const button = document.getElementById(`palette-item-${idx}`);
+                if (button) {
+                    button.className = `w-10 h-10 rounded-lg text-sm font-bold flex items-center justify-center border transition-all ${getPaletteItemStyle(idx)}`;
+                }
+            });
+        }
+
+        function navigateQuestion(direction) {
+            let targetIdx = currentQuestionIdx + direction;
+            if (targetIdx >= 0 && targetIdx < runningTestQuestions.length) {
+                currentQuestionIdx = targetIdx;
+                renderQuestionWorkspace();
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            currentQuestionIdx = idx;
+            renderQuestionWorkspace();
+        }
+
+        function launchTimerEngine() {
+            clearInterval(countdownTimerInstance);
+            updateTimerDisplay();
+            countdownTimerInstance = setInterval(() => {
+                secondsRemaining--;
+                updateTimerDisplay();
+                if (secondsRemaining <= 0) {
+                    clearInterval(countdownTimerInstance);
+                    alert('Time allocation threshold concluded. Compiling automated assessment response dispatch protocols.');
+                    submitExam();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(secondsRemaining / 60);
+            const secs = secondsRemaining % 60;
+            document.getElementById('timer-display').innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+
+        function submitExam() {
+            clearInterval(countdownTimerInstance);
+            
+            let metrics = {
+                total: runningTestQuestions.length,
+                correct: 0,
+                wrong: 0,
+                score: 0,
+                subjects: {}
+            };
+
+            runningTestQuestions.forEach((q, idx) => {
+                const sub = q.subject || 'General';
+                if (!metrics.subjects[sub]) {
+                    metrics.subjects[sub] = { total: 0, correct: 0, wrong: 0 };
+                }
+                metrics.subjects[sub].total++;
+
+                const selected = candidateSelections[idx];
+                if (selected !== undefined) {
+                    if (selected === q.correctAnswer) {
+                        metrics.correct++;
+                        metrics.score += 4; // Standard positive validation weighting
+                        metrics.subjects[sub].correct++;
+                    } else {
+                        metrics.wrong++;
+                        metrics.score -= 1; // Standard negative marking validation sequence parameters
+                        metrics.subjects[sub].wrong++;
+                    }
+                } else {
+                    metrics.subjects[sub].wrong++; // Blank entries register negative or baseline zero metric parameters
+                }
+            });
+
+            const rawPct = (metrics.correct / metrics.total) * 100;
+            metrics.percentage = isNaN(rawPct) ? 0 : rawPct.toFixed(1);
+
+            renderResultsDashboard(metrics);
+            dispatchExternalMetrics(metrics);
+            showSection('result-view');
+        }
+
+        function renderResultsDashboard(metrics) {
+            const nameInput = document.getElementById('student-name').value;
+            document.getElementById('result-student-name').innerText = nameInput;
+            document.getElementById('analytics-score').innerText = `${metrics.score} / ${metrics.total * 4}`;
+            document.getElementById('analytics-total').innerText = metrics.total;
+            document.getElementById('analytics-correct').innerText = metrics.correct;
+            document.getElementById('analytics-wrong').innerText = metrics.wrong;
+            document.getElementById('analytics-percentage').innerText = `${metrics.percentage}%`;
+
+            const container = document.getElementById('subject-breakdown-container');
+            container.innerHTML = '';
+
+            for (const [subName, subMetrics] of Object.entries(metrics.subjects)) {
+                const subScore = (subMetrics.correct * 4) - (subMetrics.wrong * 1);
+                const subMax = subMetrics.total * 4;
+                const pct = ((subMetrics.correct / subMetrics.total) * 100).toFixed(0);
+
+                const block = document.createElement('div');
+                block.className = 'bg-brandDark/40 border border-gray-800 rounded-xl p-4';
+                block.innerHTML = `
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                        <span class="font-bold text-sm text-gray-200">${subName} Diagnostic Module</span>
+                        <span class="text-xs font-mono bg-brandCard px-2.5 py-1 rounded border border-gray-700 text-gray-400">
+                            Accuracy Index Value: <strong class="text-brandPrimary">${pct}%</strong>
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-xs font-medium text-center">
+                        <div class="bg-brandCard/60 p-2 rounded border border-gray-800/40 text-emerald-400">Correct: ${subMetrics.correct}</div>
+                        <div class="bg-brandCard/60 p-2 rounded border border-gray-800/40 text-red-400">Incorrect/Skipped: ${subMetrics.wrong}</div>
+                        <div class="bg-brandCard/60 p-2 rounded border border-gray-800/40 text-brandPrimary">Points: ${subScore}/${subMax}</div>
+                    </div>
+                `;
+                container.appendChild(block);
+            }
+        }
+
+        function dispatchExternalMetrics(metrics) {
+            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === "PASTE_URL_HERE") {
+                return; 
+            }
+
+            const payload = {
+                timestamp: new Date().toISOString(),
+                studentName: document.getElementById('student-name').value,
+                trackSelected: selectedTrack,
+                totalQuestions: metrics.total,
+                correctAnswers: metrics.correct,
+                wrongAnswers: metrics.wrong,
+                finalScore: metrics.score,
+                percentageAccuracy: `${metrics.percentage}%`
+            };
+
+            // Non-blocking fire-and-forget payload data transmission protocol pipeline
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).catch(err => console.log('External transaction delivery framework warning logs:', err));
+        }
+
+        function getMockFallbackQuestions() {
+            return [
+                {
+                    "id": 1,
+                    "subject": "Physics",
+                    "question": "A body starts from rest with a uniform acceleration of 2 m/s². What is the total displacement covered by the object within a sequence window lasting 5 seconds?",
+                    "options": ["25 meters", "50 meters", "12.5 meters", "100 meters"],
+                    "correctAnswer": 0
+                },
+                {
+                    "id": 2,
+                    "subject": "Chemistry",
+                    "question": "Which specific electron configuration transition rule aligns directly with standard core elements to define paramagnetic behavior criteria principles?",
+                    "options": ["Hund's Rule", "Aufbau Sequence Matrix", "Pauli Exclusion Principle", "Boyle's Equilibrium Constancy"],
+                    "correctAnswer": 0
+                },
+                {
+                    "id": 3,
+                    "subject": "Biology",
+                    "question": "Which metabolic processing cell sub-component structural architecture framework governs standard ATP formulation synthesis sequence matrices inside eukaryotic organelles?",
+                    "options": ["Mitochondrial Inner Membrane", "Lysosomal Vesicle Layer", "Ribosomal Core Unit", "Golgi Complex Matrix Layout"],
+                    "correctAnswer": 0
+                }
+            ];
+        }
+    </script>
+</body>
+</html>

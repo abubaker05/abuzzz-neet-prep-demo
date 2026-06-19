@@ -1,0 +1,457 @@
+[
+  {
+    "id": 1,
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "question": "Incorrectly matched in algae",
+    "options": [
+      "Volvox-Starch",
+      "Ectocarpus-Fucoxanthin",
+      "Ulothrix-Mannitol",
+      "Porphyra-Floridean starch"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 2,
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "question": "Carrageenan is obtained from",
+    "options": [
+      "Chlorophyceae",
+      "Phaeophyceae",
+      "Bryophytes",
+      "Rhodophyceae"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 3,
+    "subject": "Biology",
+    "chapter": "Morphology",
+    "question": "Vexillary aestivation and diadelphous stamens occur in",
+    "options": [
+      "Solanum",
+      "Allium",
+      "Pisum sativum",
+      "Colchicum"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 4,
+    "subject": "Biology",
+    "chapter": "Morphology",
+    "question": "Pea belongs to family",
+    "options": [
+      "Fabaceae",
+      "Solanaceae",
+      "Liliaceae",
+      "Poaceae"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 5,
+    "subject": "Biology",
+    "chapter": "Morphology",
+    "question": "Zygomorphic flower example",
+    "options": [
+      "Pea",
+      "Mustard",
+      "Lily",
+      "Wheat"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 6,
+    "subject": "Biology",
+    "chapter": "Anatomy",
+    "question": "Heartwood is generally",
+    "options": [
+      "Dead tissue",
+      "Living tissue",
+      "Meristematic",
+      "Epidermal"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 7,
+    "subject": "Biology",
+    "chapter": "Anatomy",
+    "question": "Vascular bundles in monocot stem are generally",
+    "options": [
+      "Scattered",
+      "Ring arranged",
+      "Absent",
+      "Radial"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 8,
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "question": "Exoskeleton of arthropods contains",
+    "options": [
+      "Cellulose",
+      "Cutin",
+      "Lignin",
+      "Chitin"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 9,
+    "subject": "Biology",
+    "chapter": "Cell Division",
+    "question": "Pairing of homologous chromosomes occurs in",
+    "options": [
+      "Mitosis",
+      "Meiosis I",
+      "Cytokinesis",
+      "Anaphase"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 10,
+    "subject": "Biology",
+    "chapter": "Cell Division",
+    "question": "Crossing over occurs during",
+    "options": [
+      "Prophase I",
+      "Metaphase",
+      "Anaphase",
+      "Telophase"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 11,
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "question": "Apoplastic pathway does not involve",
+    "options": [
+      "Cell wall movement",
+      "Intercellular spaces",
+      "Passive flow",
+      "Cytoplasmic streaming"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 12,
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "question": "Nitrogen fixation in Alnus is by",
+    "options": [
+      "Rhizobium",
+      "Azotobacter",
+      "Frankia",
+      "Nostoc"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 13,
+    "subject": "Biology",
+    "chapter": "Photosynthesis",
+    "question": "Primary CO2 acceptor in C4 plants",
+    "options": [
+      "RuBP",
+      "PEP",
+      "ATP",
+      "NADP"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 14,
+    "subject": "Biology",
+    "chapter": "Respiration",
+    "question": "Net ATP gain in glycolysis",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 15,
+    "subject": "Biology",
+    "chapter": "Plant Growth",
+    "question": "Female flowers in cucumber are promoted by",
+    "options": [
+      "ABA",
+      "Gibberellin",
+      "Cytokinin",
+      "Ethylene"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 16,
+    "subject": "Physics",
+    "chapter": "Magnetism",
+    "question": "Magnetic field at center of coil depends directly on",
+    "options": [
+      "Current",
+      "Resistance",
+      "Voltage",
+      "Charge"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 17,
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "Work done in constant volume process is",
+    "options": [
+      "Zero",
+      "Positive",
+      "Negative",
+      "Infinite"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 18,
+    "subject": "Physics",
+    "chapter": "Optics",
+    "question": "At Brewster angle reflected light is",
+    "options": [
+      "Unpolarized",
+      "Completely polarized",
+      "Diffracted",
+      "Random"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 19,
+    "subject": "Physics",
+    "chapter": "Transformers",
+    "question": "In ideal transformer Vs/Vp = Ns/Np",
+    "options": [
+      "True",
+      "False",
+      "Only AC",
+      "Only DC"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 20,
+    "subject": "Physics",
+    "chapter": "Measurements",
+    "question": "Vernier constant improves",
+    "options": [
+      "Precision",
+      "Mass",
+      "Temperature",
+      "Density"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 21,
+    "subject": "Physics",
+    "chapter": "Elasticity",
+    "question": "Young's modulus measures",
+    "options": [
+      "Elastic stiffness",
+      "Heat",
+      "Charge",
+      "Momentum"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 22,
+    "subject": "Physics",
+    "chapter": "Mechanics",
+    "question": "Force on block B in frictionless contact depends on",
+    "options": [
+      "System acceleration",
+      "Color",
+      "Shape",
+      "Area"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 23,
+    "subject": "Physics",
+    "chapter": "YDSE",
+    "question": "White light in YDSE gives",
+    "options": [
+      "Central white fringe",
+      "No fringe",
+      "Only red fringe",
+      "Only blue fringe"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 24,
+    "subject": "Physics",
+    "chapter": "Modern Physics",
+    "question": "Photon energy equals",
+    "options": [
+      "hv",
+      "mc",
+      "mv",
+      "h/m"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 25,
+    "subject": "Physics",
+    "chapter": "SHM",
+    "question": "Time period of simple pendulum depends on",
+    "options": [
+      "Length",
+      "Mass",
+      "Density",
+      "Volume"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 26,
+    "subject": "Chemistry",
+    "chapter": "Mole Concept",
+    "question": "1 mole contains",
+    "options": [
+      "6.022e23 particles",
+      "100 particles",
+      "1000 particles",
+      "1 particle"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 27,
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "question": "Electron discovered by",
+    "options": [
+      "J.J. Thomson",
+      "Rutherford",
+      "Bohr",
+      "Chadwick"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 28,
+    "subject": "Chemistry",
+    "chapter": "Periodic Table",
+    "question": "Group 18 elements are",
+    "options": [
+      "Noble gases",
+      "Alkali metals",
+      "Halogens",
+      "Lanthanides"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 29,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "H2 molecule has",
+    "options": [
+      "Covalent bond",
+      "Ionic bond",
+      "Metallic bond",
+      "Hydrogen bond"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 30,
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "question": "SI unit of pressure",
+    "options": [
+      "Pascal",
+      "Joule",
+      "Newton",
+      "Watt"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 31,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "Exothermic reaction has",
+    "options": [
+      "Negative enthalpy",
+      "Positive enthalpy",
+      "Zero enthalpy",
+      "Infinite enthalpy"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 32,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "pH of neutral water at 25C",
+    "options": [
+      "7",
+      "1",
+      "14",
+      "0"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 33,
+    "subject": "Chemistry",
+    "chapter": "Redox",
+    "question": "Oxidation is",
+    "options": [
+      "Loss of electrons",
+      "Gain of electrons",
+      "Gain of neutrons",
+      "Loss of protons"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 34,
+    "subject": "Chemistry",
+    "chapter": "Organic",
+    "question": "Methane formula",
+    "options": [
+      "CH4",
+      "C2H6",
+      "CH3OH",
+      "CO2"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 35,
+    "subject": "Chemistry",
+    "chapter": "Hydrogen",
+    "question": "Most abundant element in universe",
+    "options": [
+      "Hydrogen",
+      "Oxygen",
+      "Carbon",
+      "Nitrogen"
+    ],
+    "correctcorrectAnswer": 0
+  }
+]
